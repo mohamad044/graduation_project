@@ -1,0 +1,8 @@
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Deploy Contract</button>
+</form>
+
+{% if contract_address %}
+    <p>Contract deployed at: {{ contract_address }}</p>
+{% endif %}
